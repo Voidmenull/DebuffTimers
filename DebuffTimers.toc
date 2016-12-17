@@ -1,0 +1,9 @@
+## Interface: 11200
+## Title: Debuff Timers
+## Notes: Timer Overlays for enemy buffs and debuffs
+## Author: Renew, based on: shirsig - aurae
+## SavedVariablesPerCharacter: AUF_settings
+## OptionalDeps: pfUI, LunaUnitFrames, XPerl_Target, DiscordUnitFrames, UnitFramesImproved_Vanilla
+effects.lua
+actions.lua
+DebuffTimers.lua
