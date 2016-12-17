@@ -576,11 +576,6 @@ AUF_EFFECTS["Concussion Blow"] = {
 	DURATION = 5,
 }
 
-AUF_EFFECTS["War Stomp"] = {
-	ICON = 'Ability_WarStomp',
-	DURATION = 2,
-}
-
 -- Green Whelp Armour
 AUF_EFFECTS["Sleep"] = {
 	ICON = 'Spell_Holy_MindVision',
