@@ -10,6 +10,10 @@ AUF_DELAYS = {
 
 AUF_RANKS = {}
 
+AUF_RANKS["Taunt"] = {
+	DURATION = {3},
+}
+
 AUF_RANKS["Sunder Armor"] = {
 	DURATION = {30, 30, 30, 30, 30},
 }
@@ -132,6 +136,7 @@ AUF_RANKS["Kidney Shot"] = {
 
 AUF_ACTIONS = {
 	--["Sunder Armor"] = true,
+	["Taunt"] = true,
 	["Challenging Shout"] = true,
 	["Demoralizing Shout"] = true,
 	["Mocking Blow"] = true,
@@ -207,7 +212,7 @@ AUF_ACTIONS = {
 	["Howl of Terror"] = true,
 	["Death Coil"] = true,
 	["Banish"] = true,
-	["Intercept"] = "Intercept Stun",
+	["Intercept"] = true,
 	["Hamstring"] = true,
 	["Intimidating Shout"] = true,
 	["Concussion Blow"] = true,

@@ -393,7 +393,7 @@ do
 		if player[hostilePlayer(arg1)] == nil then player[hostilePlayer(arg1)] = true end -- wrong for pets
 		for unit, effect in string.gfind(arg1, '(.+) is afflicted by (.+)%.') do
 			if AUF_EFFECTS[effect] and AUF_EFFECTS[effect].EXTERN then
-				--StartTimer(effect, unit, GetTime())
+				StartTimer(effect, unit, GetTime())
 			end
 		end
 	end
@@ -402,7 +402,7 @@ do
 		if player[hostilePlayer(arg1)] == nil then player[hostilePlayer(arg1)] = true end -- wrong for pets
 		for unit, effect in string.gfind(arg1, '(.+) is afflicted by (.+)%.') do
 			if AUF_EFFECTS[effect] and AUF_EFFECTS[effect].EXTERN then
-				--StartTimer(effect, unit, GetTime())
+				StartTimer(effect, unit, GetTime())
 			end
 		end
 	end
@@ -684,7 +684,10 @@ function AUF:UpdateDebuffs()
 			if not timer.DR and AUF.UnitName("target") == timer.UNIT then
 				for i=1,16 do
 					if UnitDebuffText("target",i) == timer.EFFECT and getglobal(AUF.DebuffAnchor..i) and not AUF.DoubleCheck[timer.EFFECT] then
-						AUF.DoubleCheck[timer.EFFECT] = true
+						if timer.EFFECT == "Intimidating Shout" then -- exception
+						else
+							AUF.DoubleCheck[timer.EFFECT] = true
+						end
 						-- xper exception
 						if  getglobal("XPerl_Target_BuffFrame") then
 							AUF.Debuff[i].parent:SetWidth(getglobal(AUF.DebuffAnchor..i):GetWidth()*0.7)

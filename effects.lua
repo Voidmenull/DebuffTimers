@@ -261,6 +261,11 @@ AUF_EFFECTS["Thunder Clap"] = {
 	DURATION = 30,
 }
 
+AUF_EFFECTS["Taunt"] = {
+	ICON = 'Ability_Nature_Reincarnation',
+	DURATION = 3,
+}
+
 AUF_EFFECTS["Mocking Blow"] = {
 	ICON = 'Ability_Warrior_PunishingBlow',
 	DURATION = 6,
@@ -488,6 +493,19 @@ AUF_EFFECTS["Turn Undead"] = {
 AUF_EFFECTS["Inferno Effect"] = {
 	ICON = 'Spell_Frost_Stun',
 	DURATION = 2,
+	EXTERN = true,
+}
+
+AUF_EFFECTS["Cripple"] = {
+	ICON = 'Spell_Shadow_Cripple',
+	DURATION = 15,
+	EXTERN = true,
+}
+
+AUF_EFFECTS["War Stomp"] = {
+	ICON = 'Ability_WarStomp',
+	DURATION = 2,
+	EXTERN = true,
 }
 
 AUF_EFFECTS["Seduction"] = {
@@ -512,17 +530,19 @@ AUF_EFFECTS["Death Coil"] = {
 
 AUF_EFFECTS["Banish"] = {
 	ICON = 'Spell_Shadow_Cripple',
-	DURATION = 20, -- 30
+	DURATION = 20,
 }
 
 AUF_EFFECTS["Charge Stun"] = {
 	ICON = 'Spell_Frost_Stun',
 	DURATION = 1,
+	EXTERN = true,
 }
 
 AUF_EFFECTS["Intercept Stun"] = {
 	ICON = 'Ability_Rogue_Sprint',
 	DURATION = 3,
+	EXTERN = true,
 }
 
 AUF_EFFECTS["Mace Specialization"] = {
@@ -548,6 +568,7 @@ AUF_EFFECTS["Intimidating Shout"] = {
 AUF_EFFECTS["Revenge Stun"] = {
 	ICON = 'Ability_Warrior_Revenge',
 	DURATION = 3,
+	EXTERN = true,
 }
 
 AUF_EFFECTS["Concussion Blow"] = {
