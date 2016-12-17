@@ -6,6 +6,7 @@ AUF_DELAYS = {
 	["Viper Sting"] = 1,
 	["Serpent Sting"] = 1,
 	["Wyvern Sting"] = 1,
+	["Wyvern Sting"] = 1,
 }
 
 AUF_RANKS = {}
@@ -57,6 +58,7 @@ AUF_RANKS["Shackle Undead"] = {
 AUF_RANKS["Entangling Roots"] = {
 	DURATION = {12, 15, 18, 21, 24, 27},
 }
+
 
 AUF_RANKS["Bash"] = {
 	DURATION = {2, 3, 4},
@@ -134,8 +136,47 @@ AUF_RANKS["Kidney Shot"] = {
 	DURATION = {0, 1},
 }
 
+AUF_RANKS["Moonfire"] = {
+	DURATION = {9, 12, 12, 12 ,12 ,12 ,12 ,12 ,12 ,12},
+}
+
+AUF_RANKS["Demoralizing Roar"] = {
+	DURATION = {30, 30, 30, 30, 30},
+}
+
+AUF_RANKS["Rake"] = {
+	DURATION = {9, 9, 9, 9},
+}
+
+AUF_RANKS["Rip"] = {
+	DURATION = {12, 12, 12, 12, 12, 12},
+}
+
+AUF_RANKS["Soothe Animal"] = {
+	DURATION = {15, 15, 15},
+}
+
+AUF_RANKS["Growl"] = {
+	DURATION = {3},
+}
+
+AUF_RANKS["Challenging Roar"] = {
+	DURATION = {6},
+}
+
+AUF_RANKS["Insect Swarm"] = {
+	DURATION = {12, 12, 12, 12, 12},
+}
+
 AUF_ACTIONS = {
 	--["Sunder Armor"] = true,
+	["Insect Swarm"] = true,
+	["Challenging Roar"] = true,
+	["Growl"] = true,
+	["Soothe Animal"] = true,
+	["Rip"] = true,
+	["Rake"] = true,
+	["Demoralizing Roar"] = true,
 	["Taunt"] = true,
 	["Challenging Shout"] = true,
 	["Demoralizing Shout"] = true,

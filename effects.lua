@@ -148,7 +148,54 @@ AUF_EFFECTS["Faerie Fire (Feral)"] = {
 
 AUF_EFFECTS["Moonfire"] = {
 	ICON = 'Spell_Nature_StarFall',
-	DURATION = 8,
+	DURATION = 9,
+}
+
+AUF_EFFECTS["Soothe Animal"] = {
+	ICON = 'Ability_Hunter_BeastSoothe',
+	DURATION = 15,
+}
+
+AUF_EFFECTS["Growl"] = {
+	ICON = 'Ability_Physical_Taunt',
+	DURATION = 3,
+}
+
+AUF_EFFECTS["Challenging Roar"] = {
+	ICON = 'Ability_Druid_ChallengingRoar',
+	DURATION = 6,
+}
+
+AUF_EFFECTS["Insect Swarm"] = {
+	ICON = 'Ability_Nature_InsectSwarm',
+	DURATION = 12,
+}
+
+AUF_EFFECTS["Feral Charge Effect"] = {
+	ICON = 'Ability_Hunter_Pet_Bear',
+	DURATION = 4,
+	EXTERN = true,
+}
+
+AUF_EFFECTS["Pounce Bleed"] = {
+	ICON = 'Ability_Druid_SurpriceEffect',
+	DURATION = 18,
+	EXTERN = true,
+}
+
+AUF_EFFECTS["Demoralizing Roar"] = {
+	ICON = 'Ability_Druid_DemoralizingRoar',
+	DURATION = 30,
+}
+
+AUF_EFFECTS["Rake"] = {
+	ICON = 'Ability_Druid_Disembowel',
+	DURATION = 9,
+}
+
+AUF_EFFECTS["Rip"] = {
+	ICON = 'Ability_GhoulFrenzy',
+	DURATION = 12,
 }
 
 AUF_EFFECTS["Scorpid Sting"] = {
@@ -461,6 +508,7 @@ AUF_EFFECTS["Counterattack"] = {
 AUF_EFFECTS["Improved Wing Clip"] = {
 	ICON = 'Ability_Rogue_Trip',
 	DURATION = 5,
+	EXTERN = true,
 }
 
 AUF_EFFECTS["Wyvern Sting"] = {
@@ -526,6 +574,7 @@ AUF_EFFECTS["Howl of Terror"] = {
 AUF_EFFECTS["Death Coil"] = {
 	ICON = 'Spell_Shadow_DeathCoil',
 	DURATION = 3,
+	EXTERN = true,
 }
 
 AUF_EFFECTS["Banish"] = {
