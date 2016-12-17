@@ -697,8 +697,8 @@ function AUF:UpdateDebuffs()
 						end
 						
 						AUF.Debuff[i].parent:SetPoint("CENTER",getglobal(AUF.DebuffAnchor..i),"CENTER",0,0)
-						getglobal(AUF.DebuffAnchor..i):SetID(i)
-						getglobal(AUF.DebuffAnchor..i):SetScript("OnClick", function() CastSpellByName(UnitDebuffText("target",this:GetID())) end)
+						--getglobal(AUF.DebuffAnchor..i):SetID(i)
+						--getglobal(AUF.DebuffAnchor..i):SetScript("OnClick", function() CastSpellByName(UnitDebuffText("target",this:GetID())) end)
 						AUF.Debuff[i].parent:Show()
 						
 						if pfCooldownFrame_SetTimer then pfCooldownFrame_SetTimer(AUF.Debuff[i],timer.START, timer.END-timer.START,1)
