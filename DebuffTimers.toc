@@ -3,7 +3,9 @@
 ## Notes: Timer Overlays for enemy buffs and debuffs
 ## Author: Renew, based on: shirsig - aurae
 ## SavedVariablesPerCharacter: AUF_settings
-## OptionalDeps: DPSMate, pfUI, LunaUnitFrames, XPerl_Target, DiscordUnitFrames, UnitFramesImproved_Vanilla
-effects.lua
-actions.lua
+## OptionalDeps: DPSMate, pfUI, LunaUnitFrames, XPerl_Target, DiscordUnitFrames, modui, UnitFramesImproved_Vanilla
+
+Debuffs.lua
+Buffs.lua
+
 DebuffTimers.lua
