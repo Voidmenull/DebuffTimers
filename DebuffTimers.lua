@@ -125,6 +125,9 @@ do
 				casting[name] = TARGET
 				SetActionRank(name, AUF_TooltipTextRight1:GetText())
 			end
+			if GetComboPoints() > 0 then
+				COMBO = GetComboPoints()
+			end
 			return orig(slot, clicked, onself)
 		end
 	end
@@ -135,6 +138,9 @@ do
 			local name, rank = GetSpellName(index, booktype)
 			casting[name] = TARGET
 			SetActionRank(name, rank)
+			if GetComboPoints() > 0 then
+				COMBO = GetComboPoints()
+			end
 			return orig(index, booktype)
 		end
 	end
@@ -152,6 +158,9 @@ do
 				casting[name] = TARGET
 				SetActionRank(name, rank)
 			end
+			if GetComboPoints() > 0 then
+				COMBO = GetComboPoints()
+			end
 			return orig(text, onself)
 		end
 	end
@@ -166,9 +175,6 @@ do
 		for action, target in casting do
 			if AUFdebuff.SPELL[action] then
 				local effect = AUFdebuff.SPELL[action].EFFECT or action or AUFdebuff.SPELL[action]
-				if GetComboPoints() > 0 then
-					COMBO = GetComboPoints()
-				end
 				
 				if AUFdebuff.EFFECT[effect] and (not IsPlayer(target) or EffectActive(effect, target)) then
 					if pending[effect] then
@@ -330,7 +336,7 @@ function StartTimer(effect, unit, start)
 	local comboTime = 0
 	if AUFdebuff.SPELL[effect] and AUFdebuff.SPELL[effect].COMBO then comboTime = AUFdebuff.SPELL[effect].COMBO[COMBO] end
 	
-	if AUFdebuff.SPELL[effect] and AUFdebuff.SPELL[effect].COMBO then
+	if AUFdebuff.SPELL[effect] and AUFdebuff.SPELL[effect].COMBO and COMBO > 0 then
 		duration = duration + comboTime
 	end
 
@@ -1150,4 +1156,3 @@ function AUF:DatabasePreload()
 		end
 	end
 end
-
