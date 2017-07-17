@@ -574,7 +574,6 @@ function AUF.Debuff:Build()
 		AUF.Debuff[i].Font = AUF.Debuff[i]:CreateFontString(nil, "OVERLAY")
 		AUF.Debuff[i].Font:SetPoint("CENTER", 0, 0)
 		AUF.Debuff[i].Font:SetFont("Fonts\\ARIALN.TTF", AUF_settings.TextSize, "OUTLINE")
-		if getglobal("pfUITargetDebuff1") then AUF.Debuff[i].Font:SetFont("Interface\\AddOns\\pfUI\\fonts\\homespun.ttf", AUF_settings.TextSize, "OUTLINE") end
 		AUF.Debuff[i].Font:SetJustifyH("CENTER")
 		AUF.Debuff[i].Font:SetTextColor(1,1,1)
 		AUF.Debuff[i].Font:SetText("")
@@ -598,7 +597,6 @@ function AUF.Buff:Build()
 		AUF.Buff[i].Font = AUF.Buff[i]:CreateFontString(nil, "OVERLAY")
 		AUF.Buff[i].Font:SetPoint("CENTER", 0, 0)
 		AUF.Buff[i].Font:SetFont("Fonts\\ARIALN.TTF", AUF_settings.TextSize, "OUTLINE")
-		if getglobal("pfUITargetBuff1") then AUF.Buff[i].Font:SetFont("Interface\\AddOns\\pfUI\\fonts\\homespun.ttf", AUF_settings.TextSize, "OUTLINE") end
 		AUF.Buff[i].Font:SetJustifyH("CENTER")
 		AUF.Buff[i].Font:SetTextColor(1,1,1)
 		AUF.Buff[i].Font:SetText("")
@@ -712,9 +710,8 @@ function AUF:UpdateDebuffs()
 						getglobal(AUF.DebuffAnchor..i):SetScript("OnClick", function() CastSpellByName(UnitDebuffText("target",this:GetID())) end)
 						AUF.Debuff[i].parent:Show()
 						
-						if pfCooldownFrame_SetTimer then pfCooldownFrame_SetTimer(AUF.Debuff[i],timer.START, timer.END-timer.START,1)
-						else CooldownFrame_SetTimer(AUF.Debuff[i],timer.START, timer.END-timer.START,1) end
-						AUF:UpdateFont(i,timer.START,timer.END-GetTime(),"Debuff")
+						CooldownFrame_SetTimer(AUF.Debuff[i],timer.START, timer.END-timer.START,1)
+						if not getglobal("pfUITargetDebuff1") then AUF:UpdateFont(i,timer.START,timer.END-GetTime(),"Debuff") end
 					end
 					
 					if AUF.UnitBuff("target",i) == "Interface\\Icons\\"..AUFdebuff.EFFECT[timer.EFFECT].ICON and getglobal(AUF.BuffAnchor..i) then
@@ -731,9 +728,8 @@ function AUF:UpdateDebuffs()
 						AUF.Buff[i].parent:SetPoint("CENTER",getglobal(AUF.BuffAnchor..i),"CENTER",0,0)
 						AUF.Buff[i].parent:Show()
 						
-						if pfCooldownFrame_SetTimer then pfCooldownFrame_SetTimer(AUF.Buff[i],timer.START, timer.END-timer.START,1)
-						else CooldownFrame_SetTimer(AUF.Buff[i],timer.START, timer.END-timer.START,1) end
-						AUF:UpdateFont(i,timer.START,timer.END-GetTime(),"Buff")
+						CooldownFrame_SetTimer(AUF.Buff[i],timer.START, timer.END-timer.START,1)
+						if not getglobal("pfUITargetBuff1") then AUF:UpdateFont(i,timer.START,timer.END-GetTime(),"Buff") end
 					end
 				end
 			end
@@ -1006,9 +1002,7 @@ function AUF:SaveOptions()
 	AUF_settings.TextSize = AUF.Options.SizeEditBox:GetNumber()
 	for i=1,16 do
 		AUF.Debuff[i].Font:SetFont("Fonts\\ARIALN.TTF", AUF_settings.TextSize, "OUTLINE")
-		if getglobal("pfUITargetDebuff1") then AUF.Debuff[i].Font:SetFont("Interface\\AddOns\\pfUI\\fonts\\homespun.ttf", AUF_settings.TextSize, "OUTLINE") end
 		AUF.Buff[i].Font:SetFont("Fonts\\ARIALN.TTF", AUF_settings.TextSize, "OUTLINE")
-		if getglobal("pfUITargetBuff1") then AUF.Buff[i].Font:SetFont("Interface\\AddOns\\pfUI\\fonts\\homespun.ttf", AUF_settings.TextSize, "OUTLINE") end
 	end
 	
 	-- aura save options
